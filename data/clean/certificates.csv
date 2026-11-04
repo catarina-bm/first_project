@@ -1,0 +1,17 @@
+certificate_id,certificate_name,audience
+1,16,Adult
+2,A,Adult
+3,Approved,All ages
+4,G,All ages
+5,GP,Family/Teen
+6,PG,Family/Teen
+7,PG-13,Family/Teen
+8,Passed,All ages
+9,R,Adult
+10,TV-14,Family/Teen
+11,TV-MA,Adult
+12,TV-PG,Family/Teen
+13,U,All ages
+14,U/A,Family/Teen
+15,UA,Family/Teen
+16,Unrated,Unrated

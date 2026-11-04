@@ -529,7 +529,7 @@
       ],
       "updateConstraint": "Cascade",
       "deleteConstraint": "Cascade",
-      "name": "fk_movies_certificate_id_certificate",
+      "name": "fk_movies_certificates_id_certificate",
       "color": "#808080",
       "id": "mEjmvxYsVOKDI42iTP5sL"
     },
