@@ -1,0 +1,633 @@
+{
+  "tables": [
+    {
+      "id": "nFIepge_ciR-m9j2YUGVy",
+      "name": "directors",
+      "x": -608.7621874999998,
+      "y": -331.10156250000006,
+      "locked": false,
+      "fields": [
+        {
+          "name": "director_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "hVPtPukwzoMDgHWo0N2TC"
+        },
+        {
+          "id": "DOK80OoTvDmw1nhi4xnbe",
+          "name": "director_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 266
+    },
+    {
+      "id": "4QdHp5O5hAv159CX2drD5",
+      "name": "movies",
+      "x": 35.91701318027219,
+      "y": -280.1787145691609,
+      "locked": false,
+      "fields": [
+        {
+          "name": "movie_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "r8sR5e4t-xvbRBnkp7-Mi"
+        },
+        {
+          "id": "DG4KP_9JLwwkY9bLsdffD",
+          "name": "movie_title",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "9g3eV0hDxnLDPkIIc5LQk",
+          "name": "released_year",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "Cv0QI8WB0oR8kfkHOsEhZ",
+          "name": "runtime",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "-c7FszSubUmyriE2TyLOk",
+          "name": "gross_revenue",
+          "type": "BIGINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "Cky4WDF8u4xQKMHPFSCBB",
+          "name": "director_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "WwyX_xWvayBMsSZqXp3T2",
+          "name": "certificate_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 269
+    },
+    {
+      "id": "o_n-T24UcUilWdSKZgNhh",
+      "name": "certificates",
+      "x": -18.739385629251615,
+      "y": 367.33667304421783,
+      "locked": false,
+      "fields": [
+        {
+          "name": "certificate_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "U0JSVlGEX9t45nXO_XDU8"
+        },
+        {
+          "id": "6hj5eyO5RU-c0xP8m2YJY",
+          "name": "certificate_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "TLO7R0o48-jA1OL_dane9",
+          "name": "audience",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 274
+    },
+    {
+      "id": "KYGgIAuL_ZPnWMLDjWOxe",
+      "name": "movie_genres",
+      "x": 591.9309013605439,
+      "y": -265.7528582057822,
+      "locked": false,
+      "fields": [
+        {
+          "id": "Twp3t2RwxouXbWPzOY9Tc",
+          "name": "movie_genre_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "movie_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "unsigned": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": "O6ykmXsHrp4bqNbEKUYaN"
+        },
+        {
+          "id": "Zi3qRTDgfgl2OwF_fOhWF",
+          "name": "genre_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 295
+    },
+    {
+      "id": "j9gxQWAzKpiNEjsM7Lw6c",
+      "name": "movie_cast",
+      "x": -634.1494316406254,
+      "y": 124.46870800781267,
+      "locked": false,
+      "fields": [
+        {
+          "id": "LavErYHmg6tW2_r58dwRT",
+          "name": "movie_cast_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "movie_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "rWNUQ4DW97--jL6nHZma7"
+        },
+        {
+          "id": "oLgbiBJVHP5j7fska4Kk_",
+          "name": "actor_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "lPUUhlPwPIkUCVYGiKtiz",
+          "name": "billing_order",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 268
+    },
+    {
+      "id": "bLq65sI3ADANanFa4vSC7",
+      "name": "genres",
+      "x": 573.2904408083539,
+      "y": -26.84308443833251,
+      "locked": false,
+      "fields": [
+        {
+          "name": "genre_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "N34EHDoRqKLOgvToDclpB"
+        },
+        {
+          "id": "x1G4M8_oXtgfx5m0BJUZE",
+          "name": "genre_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 285
+    },
+    {
+      "id": "Q-F7tFwQ43t-zE5IC8NYN",
+      "name": "actors",
+      "x": -628.3613066406251,
+      "y": -140.33801074218752,
+      "locked": false,
+      "fields": [
+        {
+          "name": "actor_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "CTegV0CqQgqzDLCFQf_N7"
+        },
+        {
+          "id": "EpU5J1Y8stta6DYIFiU_v",
+          "name": "actor_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 271
+    },
+    {
+      "id": "1aj01Tw9ELH6SFvzkZxkS",
+      "name": "ratings",
+      "x": 385.94748304191444,
+      "y": 239.6076684669961,
+      "locked": false,
+      "fields": [
+        {
+          "name": "rating_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "AutTrVANgIq1Qu58sYBoO"
+        },
+        {
+          "id": "7PWFY_AfoYbSkpqKU6mT1",
+          "name": "imdb_rating",
+          "type": "FLOAT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": ""
+        },
+        {
+          "id": "Zw8II2Qyy3fOTITsta_Hk",
+          "name": "meta_score",
+          "type": "FLOAT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "values": []
+        },
+        {
+          "id": "zQpuQwRByOCRRy4zq90RH",
+          "name": "number_of_votes",
+          "type": "BIGINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "QB6QgAkysicom9pKiQ7Ac",
+          "name": "movie_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 308
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": "4QdHp5O5hAv159CX2drD5",
+      "startFieldId": "Cky4WDF8u4xQKMHPFSCBB",
+      "endTableId": "nFIepge_ciR-m9j2YUGVy",
+      "endFieldId": "hVPtPukwzoMDgHWo0N2TC",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "Cky4WDF8u4xQKMHPFSCBB",
+          "endFieldId": "hVPtPukwzoMDgHWo0N2TC"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movies_director_id_directors",
+      "color": "#808080",
+      "id": "fWOW5OgEs0C4aoI2ZXgXx"
+    },
+    {
+      "startTableId": "4QdHp5O5hAv159CX2drD5",
+      "startFieldId": "WwyX_xWvayBMsSZqXp3T2",
+      "endTableId": "o_n-T24UcUilWdSKZgNhh",
+      "endFieldId": "U0JSVlGEX9t45nXO_XDU8",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "WwyX_xWvayBMsSZqXp3T2",
+          "endFieldId": "U0JSVlGEX9t45nXO_XDU8"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movies_certificate_id_certificate",
+      "color": "#808080",
+      "id": "mEjmvxYsVOKDI42iTP5sL"
+    },
+    {
+      "startTableId": "KYGgIAuL_ZPnWMLDjWOxe",
+      "startFieldId": "O6ykmXsHrp4bqNbEKUYaN",
+      "endTableId": "4QdHp5O5hAv159CX2drD5",
+      "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "O6ykmXsHrp4bqNbEKUYaN",
+          "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movie_genres_movie_id_movies",
+      "color": "#808080",
+      "id": "DrZ3lUz7aZNlpXBjnpYhm"
+    },
+    {
+      "startTableId": "1aj01Tw9ELH6SFvzkZxkS",
+      "startFieldId": "QB6QgAkysicom9pKiQ7Ac",
+      "endTableId": "4QdHp5O5hAv159CX2drD5",
+      "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi",
+      "cardinality": "one_to_one",
+      "fields": [
+        {
+          "startFieldId": "QB6QgAkysicom9pKiQ7Ac",
+          "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_ratings_movie_id_movies",
+      "color": "#808080",
+      "id": "na-23N_vqGEtWWEK_igZ9"
+    },
+    {
+      "startTableId": "j9gxQWAzKpiNEjsM7Lw6c",
+      "startFieldId": "rWNUQ4DW97--jL6nHZma7",
+      "endTableId": "4QdHp5O5hAv159CX2drD5",
+      "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "rWNUQ4DW97--jL6nHZma7",
+          "endFieldId": "r8sR5e4t-xvbRBnkp7-Mi"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movie_cast_movie_id_movies",
+      "color": "#808080",
+      "id": "GRidJPh6FJ049_jSfSrnw"
+    },
+    {
+      "startTableId": "j9gxQWAzKpiNEjsM7Lw6c",
+      "startFieldId": "oLgbiBJVHP5j7fska4Kk_",
+      "endTableId": "Q-F7tFwQ43t-zE5IC8NYN",
+      "endFieldId": "CTegV0CqQgqzDLCFQf_N7",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "oLgbiBJVHP5j7fska4Kk_",
+          "endFieldId": "CTegV0CqQgqzDLCFQf_N7"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movie_cast_actor_id_actors",
+      "color": "#808080",
+      "id": "BocnZvp_HqiBdCiQvyyv6"
+    },
+    {
+      "startTableId": "KYGgIAuL_ZPnWMLDjWOxe",
+      "startFieldId": "Zi3qRTDgfgl2OwF_fOhWF",
+      "endTableId": "bLq65sI3ADANanFa4vSC7",
+      "endFieldId": "N34EHDoRqKLOgvToDclpB",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "Zi3qRTDgfgl2OwF_fOhWF",
+          "endFieldId": "N34EHDoRqKLOgvToDclpB"
+        }
+      ],
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "fk_movie_genres_genre_id_genres",
+      "color": "#808080",
+      "id": "rp4jtKggNZeX3l7A4gGhT",
+      "manyLabel": ""
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [],
+  "views": [],
+  "database": "mysql",
+  "title": "first_project_imdb"
+}
