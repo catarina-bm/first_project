@@ -2,6 +2,7 @@ USE imdb_movies;
 
 -- directors
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/directors.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/directors.csv'
 INTO TABLE directors
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -11,6 +12,7 @@ SET director_name = TRIM(TRAILING '\r' FROM @director_name);
  
 -- certificates
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/certificates.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/certificates.csv'
 INTO TABLE certificates
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -20,6 +22,7 @@ SET audience = TRIM(TRAILING '\r' FROM @audience);
  
 -- genres
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/genres.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/genres.csv'
 INTO TABLE genres
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -29,6 +32,7 @@ SET genre_name = TRIM(TRAILING '\r' FROM @genre_name);
  
 -- actors
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/actors.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/actors.csv'
 INTO TABLE actors
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -38,6 +42,7 @@ SET actor_name = TRIM(TRAILING '\r' FROM @actor_name);
  
 -- movies (empty gross_revenue becomes NULL)
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/movies.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/movies.csv'
 INTO TABLE movies
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -48,6 +53,7 @@ SET gross_revenue = NULLIF(@gross_revenue, ''),
  
 -- ratings (empty meta_score becomes NULL)
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/ratings.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/ratings.csv'
 INTO TABLE ratings
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -58,6 +64,7 @@ SET meta_score = NULLIF(@meta_score, ''),
  
 -- movie_genres
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/movie_genres.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/movie_genres.csv'
 INTO TABLE movie_genres
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -67,6 +74,7 @@ SET genre_id = TRIM(TRAILING '\r' FROM @genre_id);
  
 -- movie_cast
 LOAD DATA LOCAL INFILE 'C:/Users/catar/Documents/Ironhack/Week_4/First_Project/first_project/data/clean/movie_cast.csv'
+-- LOAD DATA LOCAL INFILE '/Users/binduvalmiki/Desktop/Ironhack/Week_4/Day_1/first_project/data/clean/movie_cast.csv'
 INTO TABLE movie_cast
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
