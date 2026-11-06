@@ -112,8 +112,19 @@ JOIN genres g ON mg.genre_id = g.genre_id
 -- WHERE g.genre_name IN ('Action', 'Adventure', 'Drama', 'War', 'Western')
 GROUP BY decade, g.genre_name 
 ORDER BY decade, films DESC;
--- Filter 2000 onwards
 
+
+-- Filter 2000 onwards
+-- Most common genres in recent top films (2000-2019)
+SELECT
+    g.genre_name,
+    COUNT(*) AS films
+FROM movies m
+JOIN movie_genres mg ON m.movie_id = mg.movie_id
+JOIN genres g ON mg.genre_id = g.genre_id
+WHERE m.released_year BETWEEN 2000 AND 2019
+GROUP BY g.genre_name
+ORDER BY films DESC;
 
 -- Q3. Age certificate
 -- Does a film's age rating affect how much it earns?
