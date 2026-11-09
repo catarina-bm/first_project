@@ -26,7 +26,7 @@ To answer it, we analysed the IMDb Top 1000 dataset: the 1000 highest-rated film
 ## 3. Dataset Description
 
 - **Source:** [IMDB Movies Dataset – Top 1000 Movies and TV Shows (Kaggle)](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows)
-- **Licence:** _[check on the Kaggle page and add]_
+- **Licence:** `CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) (as stated on the Kaggle dataset page)`
 - **Size and structure:** one CSV file with 1,000 films and 16 columns
 - **Main variables:**
 
@@ -126,7 +126,11 @@ The database has **8 tables**. Directors, certificates, genres and actors are ea
 ### 1. Genres
 
 - **Drama produces by far the most top-rated films:** 42 films rated 8.5+, three times more than Crime (14).
-- **Adventure and Action earn the most at the box office:** about US$166M and US$141M per film on average, versus US$46M for Drama.
+- **Adventure, Sci-Fi and Action earn the most at the box office:** about US$166M, US$148M and US$141M per film on average (genres with at least 20 films), versus US$46M for Drama.
+
+![Genres with the most top-rated films](figures/q1_genres_top_rated.png)
+
+![Average US box office per film, by genre](figures/q1_genres_box_office.png)
 
 ### 2. Rating vs. box office
 
@@ -138,13 +142,23 @@ The database has **8 tables**. Directors, certificates, genres and actors are ea
 
 ### 3. Critics vs. audiences
 
-- **Critics and audiences mostly agree.** Their average scores are almost the same (audiences 79.3, critics 78.0 out of 100), and they agree within 10 points on 530 of 843 films (63%).
+- **Critics and audiences mostly agree.** Their average scores are almost the same (audiences 79.3, critics 78.0 out of 100), and they agree within 10 points on 530 of 843 films (63%). Only films with a critic score are included.
+- **The biggest disagreements are rare.** For example, for I Am Sam audiences gave 77 and critics 28.
+
+![How often critics and audiences agree](figures/q3_critics_vs_audiences.png)
+
+![Biggest disagreements between critics and audiences](figures/q3_biggest_disagreements.png)
 
 ### 4. Talent
 
 - **Christopher Nolan is the strongest director:** the highest average rating (8.46 over 8 films) and a high average box office (US$242M per film).
-- **Peter Jackson** (8.40, US$320M) also combines quality and revenue.
-- **Among actors, Orlando Bloom (8.60) and Viggo Mortensen (8.26)** stand out for both rating and box office.
+- **Peter Jackson** (8.40, US$319M) also combines quality and revenue, while many highly rated classic directors earn very little at the US box office.
+- **Among actors, Orlando Bloom stands out for both rating and box office:** 8.60 and US$335M per film. Carrie Fisher (US$254M) and Harrison Ford (US$210M) also earn a lot.
+- Only directors and actors with at least 4 films are included. The box office figures are the earnings of the films each person was part of, not their pay.
+
+![Top directors: rating and box office](figures/q4_directors.png)
+
+![Top actors: rating and box office](figures/q4_actors.png)
 
 ### 5. Trends over time
 
@@ -167,7 +181,7 @@ The database has **8 tables**. Directors, certificates, genres and actors are ea
 
 The data gives a clear profile of a film that is both well rated and commercially successful:
 
-- **Genre:** Drama is the strongest genre for ratings, but Action and Adventure earn the most and are the fastest-growing genres among recent top films.
+- **Genre:** Drama is the strongest genre for ratings, but Adventure, Sci-Fi and Action earn the most; Action and Adventure are also among the fastest-growing genres among recent top films.
 - **Popularity:** reaching a large audience matters much more for box office than a very high rating.
 - **Critics and audiences:** they mostly agree, so a film that pleases audiences is usually well received by critics too.
 - **Talent:** a few directors, especially Christopher Nolan and Peter Jackson, consistently combine high ratings with high box office.
@@ -175,11 +189,11 @@ The data gives a clear profile of a film that is both well rated and commerciall
 
 **Recommendation**
 
-Green Light Analytics recommends that the studio greenlight an **Adventure/Action film with a strong dramatic story**, aimed at a **Family/Teen rating (PG-13 or equivalent)** and a runtime of **about 2 hours**.
+Green Light Analytics recommends that the studio greenlight an **Adventure/Sci-Fi/Action film with a strong dramatic story**, aimed at a **Family/Teen rating (PG-13 or equivalent)** and a runtime of **about 2 hours**.
 
 - **Invest in reach, not perfection.** A good rating (around 7.5+) is enough; marketing, franchise potential and broad appeal drive box office more than critical acclaim.
 - **Choose the director according to the budget:**
-  - **Big budget:** Christopher Nolan (8.46 average rating, US$242M average box office) or Peter Jackson (8.40, US$320M).
+  - **Big budget:** Christopher Nolan (8.46 average rating, US$242M average box office) or Peter Jackson (8.40, US$319M).
   - **Smaller budget:** directors since 2000 with top ratings but much smaller box office, such as Bong Joon Ho (8.17 over 3 films, US$18M) or Darren Aronofsky (8.07 over 3 films, US$46M).
 
 These findings show relationships, not causes: popular films earn more, but successful films also attract more votes. They also come from films that are already top-rated, so they describe what the best films have in common.
